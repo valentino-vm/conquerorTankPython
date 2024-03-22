@@ -75,9 +75,9 @@ pip install setuptools wheel twine
 ### Ejemplo de uso
 ```
 //El ejemplo que se muestra a continuación, demuestra los pasos
-de la lista de instrucciones a partir del paso número 4
+de la lista de instrucciones
 
-// 4. Asegúrate de tener importado comandos as com
+// Asegúrate de tener importado comandos as com para iniciar
 import Comandos as com
 
 com.inicio() // Como primer comando, siempre debe de estar presente com.inicio()
