@@ -69,7 +69,7 @@ pip install setuptools wheel twine
   12. Ejecuta el programa
 
 ### Ejemplo de uso
-
+"""
 import Comandos as com
 
 com.inicio()
@@ -80,3 +80,4 @@ com.derecha(4,200) // com.derecha(segundos, velocidad "0-255")
 com.final()
 
 com.cargar()
+"""
