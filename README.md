@@ -13,8 +13,9 @@ Dado que tanto el hardware como el software están en constante evolución, es p
 1. [Requisitos](#requisitos)
 2. [Dependencias de Software](#dependencias-de-software)
 3. [Instalación de Librerías](#instalación-de-librerías)
-4. [Instrucciones](#instrucciones)
-5. [Ejemplo de Uso](#ejemplo-de-uso)
+4. [Lista de comandos](#lista-de-comandos)
+5. [Instrucciones](#instrucciones)
+6. [Ejemplo de Uso](#ejemplo-de-uso)
 
 ## Requisitos
 
@@ -23,7 +24,7 @@ Dado que tanto el hardware como el software están en constante evolución, es p
 Para el funcionamiento del código, se requiere la instalación del siguiente software:
 
 - Versión Actual de Python
-- Arduino IDE
+- Arduino IDE (opcional)
 
 ### Instalación de Librerías
 
@@ -39,8 +40,43 @@ pip install --upgrade setuptools
 pip install pyduinocli
 pip install pyserial
 pip install time
+pip install setuptools wheel twine
 
+#### Lista de comandos 
+      inicio
+      final
+      cargar
+      avanza
+      reversa
+      izquierda
+      derecha
+      avanzaIzquierda
+      reversaIzquierda
+      avanzaDerecha
+      reversaDerecha
+      alto
 ### Instrucciones
   1. Conecta el robot tanque Conqueror a tu computadora.
-  2. Ejecuta el script prueba1.py para enviar comandos al robot tanque y controlar sus movimientos.
-  3. Si deseas utilizar los sensores externos, asegúrate de conectarlos adecuadamente y modificar el script según sea necesario.
+  3. Crea un script.py en la carpeta RobotConquerorTank para enviar comandos al robot tanque y controlar sus movimientos.
+  4. Asegúrate de tener importado comandos as com
+  5. Asegúrate que estás trabajando en la misma carpeta
+  6. Posteriormente, ten asegurado que no esté en ninguna conexión Bluetooth o con algún otro puerto físico.
+  7. El orden en el que se tienen que poner los comandos es com.inicio()
+  8. Posteriormente, asegúrate de tener presentes la lista de comandos a utilizar
+  9. Agrega los comandos a usar.
+  10. Agrega el com.final()
+  11. Posteriormente el com.cargar()
+  12. Ejecuta el programa
+
+### Ejemplo de uso
+
+import Comandos as com
+
+com.inicio()
+
+com.derecha(4,200) // com.derecha(segundos, velocidad "0-255")
+
+
+com.final()
+
+com.cargar()
