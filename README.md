@@ -74,24 +74,24 @@ pip install setuptools wheel twine
 
 ### Ejemplo de uso
 ```
-//El ejemplo que se muestra a continuación, demuestra los pasos
+#El ejemplo que se muestra a continuación, demuestra los pasos
 de la lista de instrucciones
 
-// Asegúrate de tener importado comandos as com para iniciar
+# Asegúrate de tener importado comandos as com para iniciar
 import Comandos as com
 
-com.inicio() // Como primer comando, siempre debe de estar presente com.inicio()
+com.inicio() # Como primer comando, siempre debe de estar presente com.inicio()
 
-// Posteriormente, con el nombre com y la instrucción de la lista de comandos,
-creas la acción deseada para que el robot lo ejecute
+# Posteriormente, con el nombre com y la instrucción de la lista de comandos,
+# creas la acción deseada para que el robot lo ejecute
 y se crean los parámetros dentro del paréntesis con la fórmula (segundos, velocidad "0-255")
 
-com.derecha(4,200) //Ejemplo
+com.derecha(4,200) #Ejemplo
 
 
-com.final() // Detiene la acción deseada
+com.final() # Detiene la acción deseada
 
-com.cargar() // Al terminar la lista de acciones que quieras que realice,
-este comando logrará que cargue el programa y se ejecute de manera autónoma
-sin necesidad de estar conectado a un puerto.
+com.cargar() # Al terminar la lista de acciones que quieras que realice,
+# este comando logrará que cargue el programa y se ejecute de manera autónoma
+# sin necesidad de estar conectado a un puerto.
 ```
