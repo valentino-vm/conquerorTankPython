@@ -35,18 +35,18 @@ Los siguientes comandos deben ser ejecutados en orden para garantizar una correc
 Las siguientes librerías se utilizan para controlar el robot tanque:
 
 #### Instalación (Windows)
-
+```
 pip install --upgrade setuptools
 pip install pyduinocli
 pip install pyserial
 pip install time
 pip install setuptools wheel twine
-
+```
 #### Lista de comandos 
-      inicio
+      inicio 
       final
-      cargar
-      avanza
+      cargar 
+      avanza 
       reversa
       izquierda
       derecha
@@ -69,15 +69,19 @@ pip install setuptools wheel twine
   12. Ejecuta el programa
 
 ### Ejemplo de uso
-"""
-import Comandos as com
+```
+//El ejemplo que se muestra a continuación, demuestra los pasos de la lista de instrucciones a partir del paso número 4
 
-com.inicio()
+import Comandos as com // 4. Asegúrate de tener importado comandos as com
 
-com.derecha(4,200) // com.derecha(segundos, velocidad "0-255")
+com.inicio() // Como primer comando, siempre debe de estar presente com.inicio()
+
+// Posteriormente, con el nombre com y la instrucción de la lista de comandos, creas la acción deseada para que el robot lo ejecute y se crean los parámetros dentro del paréntesis con la fórmula (segundos, velocidad "0-255")
+
+com.derecha(4,200) //Ejemplo
 
 
-com.final()
+com.final() // Detiene la acción deseada
 
-com.cargar()
-"""
+com.cargar() // Al terminar la lista de acciones que quieras que realice, este comando logrará que cargue el programa y se ejecute de manera autónoma sin necesidad de estar conectado a un puerto.
+```
