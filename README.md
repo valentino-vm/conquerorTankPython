@@ -43,18 +43,22 @@ pip install time
 pip install setuptools wheel twine
 ```
 #### Lista de comandos 
-      inicio 
-      final
-      cargar 
-      avanza 
-      reversa
-      izquierda
-      derecha
-      avanzaIzquierda
-      reversaIzquierda
-      avanzaDerecha
-      reversaDerecha
-      alto
+| Nombre del Comando | Acción a Realizar                           | Parámetros a Agregar                            |
+|--------------------|---------------------------------------------|-------------------------------------------------|
+| inicio             | Inicia la escritura de un nuevo script de movimiento para el robot tanque. | Ninguno                                         |
+| final              | Finaliza la escritura y cierra el script de movimiento para el robot tanque. | Ninguno                                         |
+| cargar             | Carga un script de movimiento previamente creado para el robot tanque. | Ruta del archivo del script a cargar           |
+| avanza             | Hace que el robot tanque avance durante un tiempo y a una velocidad específica. | tiempo (segundos), Velocidad (0-255)           |
+| reversa            | Hace que el robot tanque retroceda durante un tiempo y a una velocidad específica. | tiempo (segundos), Velocidad (0-255)           |
+| izquierda          | Hace que el robot tanque gire hacia la izquierda durante un tiempo y a una velocidad específica. | tiempo (segundos), Velocidad (0-255)           |
+| derecha            | Hace que el robot tanque gire hacia la derecha durante un tiempo y a una velocidad específica. | tiempo (segundos), Velocidad (0-255)           |
+| avanzaIzquierda    | Hace que el robot tanque avance y gire hacia la izquierda durante un tiempo y a una velocidad específica. | tiempo (segundos), Velocidad (0-255)           |
+| reversaIzquierda   | Hace que el robot tanque retroceda y gire hacia la izquierda durante un tiempo y a una velocidad específica. | tiempo (segundos), Velocidad (0-255)           |
+| avanzaDerecha      | Hace que el robot tanque avance y gire hacia la derecha durante un tiempo y a una velocidad específica. | tiempo (segundos), Velocidad (0-255)           |
+| reversaDerecha     | Hace que el robot tanque retroceda y gire hacia la derecha durante un tiempo y a una velocidad específica. | tiempo (segundos), Velocidad (0-255)           |
+| alto               | Detiene todos los movimientos del robot tanque y lo mantiene en una posición estacionaria durante un tiempo especificado. | tiempo (segundos)                               |
+
+
 ### Instrucciones
   1. Conecta el robot tanque Conqueror a tu computadora.
   3. Crea un script.py en la carpeta RobotConquerorTank para enviar comandos al robot tanque y controlar sus movimientos.
@@ -70,18 +74,24 @@ pip install setuptools wheel twine
 
 ### Ejemplo de uso
 ```
-//El ejemplo que se muestra a continuación, demuestra los pasos de la lista de instrucciones a partir del paso número 4
+//El ejemplo que se muestra a continuación, demuestra los pasos
+de la lista de instrucciones a partir del paso número 4
 
-import Comandos as com // 4. Asegúrate de tener importado comandos as com
+// 4. Asegúrate de tener importado comandos as com
+import Comandos as com
 
 com.inicio() // Como primer comando, siempre debe de estar presente com.inicio()
 
-// Posteriormente, con el nombre com y la instrucción de la lista de comandos, creas la acción deseada para que el robot lo ejecute y se crean los parámetros dentro del paréntesis con la fórmula (segundos, velocidad "0-255")
+// Posteriormente, con el nombre com y la instrucción de la lista de comandos,
+creas la acción deseada para que el robot lo ejecute
+y se crean los parámetros dentro del paréntesis con la fórmula (segundos, velocidad "0-255")
 
 com.derecha(4,200) //Ejemplo
 
 
 com.final() // Detiene la acción deseada
 
-com.cargar() // Al terminar la lista de acciones que quieras que realice, este comando logrará que cargue el programa y se ejecute de manera autónoma sin necesidad de estar conectado a un puerto.
+com.cargar() // Al terminar la lista de acciones que quieras que realice,
+este comando logrará que cargue el programa y se ejecute de manera autónoma
+sin necesidad de estar conectado a un puerto.
 ```
